@@ -5,31 +5,29 @@ class AsyncBasketAsyncAwait {
     }
 
     put(product) {
-        let products = this.products;
-        products.push(product);
-        return new Promise(function (resolve) {
-            resolve();
+        return new Promise(resolve => {
+            setTimeout(() => {
+                this.products.push(product);
+                resolve();
+            }, 1000);
         });
     }
 
     get() {
-        let products = this.products;
-        return new Promise(function (resolve) {
-            resolve(products);
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(this.products);
+            }, 500);
         });
     }
 }
 
 const basket = new AsyncBasketAsyncAwait();
 
-async function name() {
-    await basket.put("Milk")
-        .then(await basket.put("Cheese")
-            .then(basket.get()
-                .then(function (value) {
-                    console.log(value);
-                })
-            ))
+const print = async function () {
+    await basket.put("Jogurt");
+    await basket.put("Kale");
+    console.log (await basket.get());
 }
 
-name();
+print();

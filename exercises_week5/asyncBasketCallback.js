@@ -5,17 +5,15 @@ class AsyncBasketCallback {
     }
 
     put(product, callback) {
-        let products = this.products;
-        setTimeout(function () {            
-            products.push(product);
+        setTimeout(() => {
+            this.products.push(product);
             callback();
         }, 1000);
     }
 
     get(callback) {
-        let products = this.products;
-        setTimeout(function () {
-           callback(products);
+        setTimeout(() => {
+            callback(this.products);
         }, 500);
     }
 }
@@ -23,6 +21,6 @@ class AsyncBasketCallback {
 const basket = new AsyncBasketCallback();
 basket.put("Cheese", () => {
     basket.put("Milk", () => {
-        basket.get(value => console.log(value));
+        basket.get(products => console.log(products));
     });
 });
