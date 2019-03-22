@@ -18,7 +18,7 @@ class AsyncBasketCallback {
     }
 }
 
-const basket = new AsyncBasketCallback();
+const basket = new PutIsSyncCallback();
 basket.put("Cheese", () => {
     basket.put("Milk", () => {
         basket.get(products => console.log(products));

@@ -22,7 +22,7 @@ class AsyncBasketPromise {
     }
 }
 
-const basket = new AsyncBasketPromise();
+const basket = new PutIsAsyncPromise();
 
 basket.put("Grapes")
 .then(() => basket.put("Lemons"))

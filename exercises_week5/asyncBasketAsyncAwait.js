@@ -22,7 +22,7 @@ class AsyncBasketAsyncAwait {
     }
 }
 
-const basket = new AsyncBasketAsyncAwait();
+const basket = new PutIsAsyncAwait();
 
 const print = async function () {
     await basket.put("Jogurt");
