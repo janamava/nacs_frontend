@@ -1,0 +1,22 @@
+{
+  "name": "nacs_frontend_exercises",
+  "version": "1.0.0",
+  "description": "exercises for specialization phase",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janamava/nacs_frontend.git"
+  },
+  "author": "Aizhana Kamalova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/janamava/nacs_frontend/issues"
+  },
+  "homepage": "https://github.com/janamava/nacs_frontend#readme",
+  "dependencies": {
+    "jest": "^24.7.0"
+  }
+}
